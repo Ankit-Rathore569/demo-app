@@ -1,6 +1,6 @@
-import { Fragment } from 'react';
-import './App.css';
-import EmployeeA from './EmployeeA';
+import { Fragment } from "react";
+import "./App.css";
+import EmployeeA from "./EmployeeA";
 function App() {
   return (
     <Fragment>
