@@ -1,17 +1,12 @@
 import { Fragment } from 'react';
 import './App.css';
-import Header from './Header';
-import Footer from './Footer';
-import PropsComp from './PropsComp';
-
+import EmployeeA from './EmployeeA';
 function App() {
   return (
     <Fragment>
-      <Header />
       <h2>Hello World APP.JS</h2>
       <hr />
-      <PropsComp name="Ankit Rathore" empid="101" domain="Frontend Developer" />
-      <Footer />
+      <EmployeeA />
     </Fragment>
   );
 }
