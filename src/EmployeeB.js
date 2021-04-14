@@ -1,29 +1,43 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 export default class EmployeeB extends Component {
     constructor(props) {
-        super(props)
+        super(props);
         this.state = {
-            name: "Drew"
+            EmpId: this.props.empBid,
+        };
+        console.log("Employee B Constructor calling");
+    }
+    static getDerivedStateFromProps(props, state) {
+        console.log("Employee B getDerivedStateFromProps calling");
+        console.log(props, state);
+        if (props.empBid !== state.EmpId) {
+            return { EmpId: props.empBid };
         }
-        console.log("Employee B Constructor calling")
+        return null;
     }
-    componentDidMount() {
-        console.log("Employee B componentDidMount calling")
+    shouldComponentUpdate(nextProps, nextState) {
+        console.log("EmployeeB shouldComponentUpdate calling");
+        console.log(nextProps, nextState);
+        return true;
     }
-    componentWillMount() {
-        console.log("Employee B componentWillMount calling")
+
+    getSnapshotBeforeUpdate(prevProps, prevState) {
+        console.log("EmployeeB getSnapshotBeforeUpdate calling");
+        console.log(prevProps, prevState);
+        return 3;
     }
-    // static getDerivedStateFromProps() {
-    //     console.log("Employee B getDerivedStateFromProps calling")
-    //     return null;
-    // }
+    componentDidUpdate(prevProps, prevState, snapShot) {
+        console.log("EmployeeB componentDidMount is invoked");
+        console.log(prevProps, prevState, snapShot);
+    }
     render() {
-        console.log("Employee B Render calling")
+        console.log("Employee B Render calling");
         return (
             <div>
                 <h1>Employee B is working</h1>
+                <h1>Emp Id:{this.state.EmpId}</h1>
             </div>
-        )
+        );
     }
 }
