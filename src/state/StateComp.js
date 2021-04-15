@@ -33,10 +33,10 @@ export default class StateComp extends Component {
     render() {
         return (
             <Fragment>
-                <h1>This is state component</h1>
-                <h3>Name:{this.state.name}</h3>
-                <h3>Total Count:{this.state.count}</h3>
-                <button onClick={this.clickMe}>Click Me</button>
+                <h5>This is state component</h5>
+                <h5>Name:{this.state.name}</h5>
+                <h5>Total Count:{this.state.count}</h5>
+                <button className="btn btn-success" onClick={this.clickMe}>Click Me</button>
             </Fragment>
         );
     }

@@ -15,7 +15,7 @@ export default class EmployeeB extends Component {
         console.log("Employee B Render calling");
         return (
             <div>
-                <h1>Employee B is working</h1>
+                <h5>Employee B is working</h5>
             </div>
         );
     }
